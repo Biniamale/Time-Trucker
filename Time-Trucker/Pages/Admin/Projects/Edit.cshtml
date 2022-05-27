@@ -1,0 +1,29 @@
+﻿@page
+@model Time_Trucker.Pages.Admin.Projects.EditModel
+
+
+<form method="post">
+	<input hidden asp-for="Project.ProjectId" />
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary pl-3">Edit Project</h2>
+            <hr />
+		</div>
+		<div asp-validation-summary="All"></div>
+		<div class="mb-3">
+			<label asp-for="Project.ProjectName"></label>
+			<input asp-for="Project.ProjectName" class="form-control" />
+			<span asp-validation-for="Project.ProjectName" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-primary" style="width:150px;">Edit</button>
+		<a asp-page="Index" class="btn btn-secondary"  style="width:150px;"> Back to List</a>
+       
+	</div>
+	
+</form>
+
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial"/>
+	}
+}
