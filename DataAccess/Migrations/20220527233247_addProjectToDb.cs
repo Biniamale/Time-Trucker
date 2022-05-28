@@ -5,7 +5,7 @@
 namespace DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class AddProjectToDb : Migration
+    public partial class addProjectToDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

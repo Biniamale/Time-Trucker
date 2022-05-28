@@ -10,7 +10,8 @@ namespace DataAccess.Repository.IRepository
     {
         ICustomerRepository Customer { get; }
         IProjectRepository Project { get; }
-       // IReportRepository Report { get; }
+        IReportRepository Report { get; }
+
         void Save();
 
     }

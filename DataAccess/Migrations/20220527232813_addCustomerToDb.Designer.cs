@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220525160304_AddCustomerToDb")]
-    partial class AddCustomerToDb
+    [Migration("20220527232813_addCustomerToDb")]
+    partial class addCustomerToDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,0 +1,61 @@
+﻿@page
+@model Time_Trucker.Pages.Admin.Reports.EditModel
+
+
+<form method="post">
+	<input hidden asp-for="Report.Id" />
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary pl-3">Edit Project</h2>
+            <hr />
+		</div>
+		<div asp-validation-summary="All"></div>
+				<div class="mb-3">
+					<label asp-for="Report.StartingDate"></label>
+					<input asp-for="Report.StartingDate" class="form-control" />
+					<span asp-validation-for="Report.StartingDate" class="text-danger"></span>
+				</div>
+				<div class="mb-3">
+					<label asp-for="Report.EndingDate"></label>
+					<input asp-for="Report.EndingDate" class="form-control" />
+					<span asp-validation-for="Report.EndingDate" class="text-danger"></span>
+				</div>
+				<div class="mb-3">
+					<label asp-for="Report.ProjectId"></label>
+					<select asp-for="Report.ProjectId" class="form-select">
+						<option disabled selected>-Select Project-</option>
+					</select>
+
+					<span asp-validation-for="Report.ProjectId" class="text-danger"></span>
+				</div>
+
+				<div class="mb-3">
+					<label asp-for="Report.CustomerId"></label>
+					<select asp-for="Report.CustomerId" class="form-select">
+						<option disabled selected>-Select Customer-</option>
+					</select>
+
+					<span asp-validation-for="Report.CustomerId" class="text-danger"></span>
+				</div>
+				<div class="mb-3">
+					<label asp-for="Report.Description"></label>
+					<textarea asp-for="Report.Description" class="form-control"></textarea>
+					<span asp-validation-for="Report.Description" class="text-danger"></span>
+				</div>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary" style="width:150px;">Create</button>
+		<a asp-page="Index" class="btn btn-secondary"  style="width:150px;"> Back to List</a>
+       
+	</div>
+	
+</form>
+
+
+
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial"/>
+	}
+}
+

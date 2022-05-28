@@ -17,11 +17,12 @@ namespace DataAccess.Repository
             _db = db;
             Customer = new CustomerRepository(_db);
             Project = new ProjectRepository(_db);
-            //Report = new ReportRepository(_db);
+            Report = new ReportRepository(_db);
+
         }
         public ICustomerRepository Customer { get; private set; }
         public IProjectRepository Project { get; private set;}
-        //public IReportRepository Report { get; private set; }
+        public IReportRepository Report { get; private set; }
 
         public void Dispose()
         {

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time-Trucker", "Time-Trucker\Time-Trucker.csproj", "{FFD2CA6F-4B9F-4ED9-8EE8-B69C59FFD1C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Time-Trucker", "Time-Trucker\Time-Trucker.csproj", "{FFD2CA6F-4B9F-4ED9-8EE8-B69C59FFD1C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{244FA6D3-FDEC-4B95-A2D4-D6807D577D0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{244FA6D3-FDEC-4B95-A2D4-D6807D577D0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{ACC55FFC-0A0D-400D-9E0A-E776922DFA26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{ACC55FFC-0A0D-400D-9E0A-E776922DFA26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
