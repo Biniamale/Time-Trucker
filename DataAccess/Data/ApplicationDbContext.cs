@@ -4,7 +4,7 @@ using Models;
 
 namespace DataAccess.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -15,5 +15,6 @@ namespace DataAccess.Data
         public DbSet<Customer> Customer { get; set; }
         public DbSet<Project> Project { get; set; }
         public DbSet<Report> Report { get; set; }
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
     }
 }
