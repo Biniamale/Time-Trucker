@@ -18,7 +18,15 @@ namespace Time_Trucker.Controllers
      var reportList = _unitOfWork.Report.GetAll(includeProperties: "Customer,Project");
      return Json(new { data = reportList });
      }
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var objFromDb = _unitOfWork.Report.GetFirstOrDefault(u => u.Id == id);
+            _unitOfWork.Report.Remove(objFromDb);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Delete successful." });
+        }
 
-}
+    }
 }
 

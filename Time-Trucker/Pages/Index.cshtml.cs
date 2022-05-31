@@ -14,7 +14,7 @@ namespace Time_Trucker.Pages
 
         public IActionResult OnGet()
         {
-            return RedirectToPage("Admin/Reports/Index");
+            return RedirectToPage("MasterPage/UI/Index");
         }
     }
 }
