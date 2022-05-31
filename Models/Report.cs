@@ -14,6 +14,7 @@ namespace Models
         public int Id { get; set; }
         [Required]
         public DateTime StartingDate { get; set; }
+        [Required]
         public DateTime EndingDate { get; set; }
         
         [Display(Name = "Project")]

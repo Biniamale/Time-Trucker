@@ -7,11 +7,12 @@ $(document).ready(function () {
             "datatype": "json"
         },
         "columns": [
-            { "data": "StartingDate", "width": "25%" },
-            { "data": "EndingDate", "width": "15%" },
-            { "data": "Project.name", "width": "15%" },
-            { "data": "Customer.name", "width": "15%" },
-            { "data": "Description", "width": "15%" },
+            
+            { "data": "startingDate", "width": "25%" },
+            { "data": "endingDate", "width": "15%" },
+            { "data": "project.projectName", "width": "15%" },
+            { "data": "customer.fullName", "width": "15%" },
+            { "data": "description", "width": "15%" },
             {
                 "data": "id",
                 "render": function (data) {

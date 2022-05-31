@@ -43,6 +43,11 @@ namespace DataAccess.Repository
 
         }
 
+        public IEnumerable<T> GetAll(string? includeProperties = null, object orderby = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public T GetFirstOrDefault(Expression<Func<T, bool>>? filter = null)
         {
             IQueryable<T> query = dbSet;

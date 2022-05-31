@@ -48,7 +48,7 @@
                 <label asp-for="Input.ConfirmPassword"></label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-           @if (User.IsInRole(StaticDetails.SupperManagerRole))
+           @if (User.IsInRole(StaticDetails.ManagerRole))
             {
                 <div class="form-floating my-2">
                     <input type="radio" name="rdUserRole" value="@StaticDetails.SupperManagerRole" />@StaticDetails.SupperManagerRole
@@ -58,7 +58,7 @@
             }
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
         </form>
- @if (!User.IsInRole(StaticDetails.SupperManagerRole))
+ @if (!User.IsInRole(StaticDetails.ManagerRole))
     {
         <div class="col-md-6 col-md-offset-2">
             <section>

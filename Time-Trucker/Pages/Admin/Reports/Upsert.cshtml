@@ -1,15 +1,16 @@
 ﻿@page
-@model Time_Trucker.Pages.Admin.Reports.EditModel
+@model Time_Trucker.Pages.Admin.Reports.UpsertModel
 
 
-<form method="post">
-	<input hidden asp-for="Report.Id" />
+<form method="post" enctype="multipart/form-data">
+	<input asp-for="Report.Id" hidden />
 	<div class="border p-3 mt-4">
 		<div class="row pb-2">
-			<h2 class="text-primary pl-3">Edit Project</h2>
-            <hr />
-		</div>
-		<div asp-validation-summary="All"></div>
+			<div class="col-9">
+				<h2 class="text-primary pl-3">
+					@(Model.Report.Id!=0 ? "Update" : "Create") Report
+				</h2>
+				<hr />
 				<div class="mb-3">
 					<label asp-for="Report.StartingDate"></label>
 					<input asp-for="Report.StartingDate" class="form-control" />
@@ -22,7 +23,7 @@
 				</div>
 				<div class="mb-3">
 					<label asp-for="Report.ProjectId"></label>
-					<select asp-for="Report.ProjectId" class="form-select">
+					<select asp-for="Report.ProjectId" asp-items="Model.ProjectList" class="form-select">
 						<option disabled selected>-Select Project-</option>
 					</select>
 
@@ -31,7 +32,7 @@
 
 				<div class="mb-3">
 					<label asp-for="Report.CustomerId"></label>
-					<select asp-for="Report.CustomerId" class="form-select">
+					<select asp-for="Report.CustomerId" asp-items="Model.CustomerList" class="form-select">
 						<option disabled selected>-Select Customer-</option>
 					</select>
 
@@ -44,18 +45,36 @@
 				</div>
 			</div>
 		</div>
-		<button type="submit" class="btn btn-primary" style="width:150px;">Create</button>
-		<a asp-page="Index" class="btn btn-secondary"  style="width:150px;"> Back to List</a>
-       
+		</div>
+		@if (Model.Report.Id != 0)
+		{
+			<button type="submit" class="btn btn-primary" style="width:150px;">Update</button>
+		}
+		else
+		{
+			<button type="submit" onclick="return ValidateInput()" class="btn btn-primary" style="width:150px;">Create</button>
+		}
+
+		<a asp-page="Index" class="btn btn-secondary" style="width:150px;"> Back to List</a>
+
 	</div>
-	
+
 </form>
 
 
-
 @section Scripts{
+<script>
+	 tinymce.init({
+	   selector: 'textarea',
+	   plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+	   toolbar_mode: 'floating',
+	});
+
+	
+	}
+</script>
 	@{
-		<partial name="_ValidationScriptsPartial"/>
+	<partial name="_ValidationScriptsPartial" />
 	}
 }
 
